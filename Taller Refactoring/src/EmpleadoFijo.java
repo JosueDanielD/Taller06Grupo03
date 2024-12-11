@@ -47,5 +47,11 @@ public class EmpleadoFijo extends Empleado {
         System.out.println("Bono Anual: " + bonoAnual);
     }
 
+    @Override
+    protected double ajustarPorDepartamento() {
+        return 10;
+    }
+
+
     // Más métodos
 }
