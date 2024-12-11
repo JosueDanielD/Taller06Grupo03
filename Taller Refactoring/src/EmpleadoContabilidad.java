@@ -1,4 +1,4 @@
-class EmpleadoContabilidad extends EmpleadoBase {
+class EmpleadoContabilidad extends Empleado {
     public EmpleadoContabilidad(double salarioBase, int horasTrabajadas) {
         super(salarioBase, horasTrabajadas);
     }
