@@ -43,5 +43,10 @@ public class EmpleadoPorHoras extends Empleado {
         return super.getHorasTrabajadas() * super.getTarifaHora();
     }
 
+    @Override
+    protected double ajustarPorDepartamento() {
+        return 30;
+    }
+
     // Más metodos
 }

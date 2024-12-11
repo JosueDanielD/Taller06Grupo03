@@ -1,16 +1,10 @@
 public class EmpleadoTemporario extends Empleado {
-    private String nombre;
-    private String genero;
-    private double salarioBase;
-    private int horasTrabajadas;
-    private String departamento;
+
     private int mesesContrato;
+    private String genero;
 
     public EmpleadoTemporario(String nombre, double salarioBase, int horasTrabajadas, String departamento, int mesesContrato, String genero) {
-        this.nombre = nombre;
-        this.salarioBase = salarioBase;
-        this.horasTrabajadas = horasTrabajadas;
-        this.departamento = departamento;
+        super(nombre, salarioBase, horasTrabajadas, 0.0, departamento); // Llama al constructor de la clase base
         this.mesesContrato = mesesContrato;
         this.genero = genero;
     }
@@ -30,6 +24,11 @@ public class EmpleadoTemporario extends Empleado {
     private void imprimirDetalleContrato() {
         System.out.println("Departamento: " + departamento);
         System.out.println("Meses de contrato: " + mesesContrato);
+    }
+
+    @Override
+    protected double ajustarPorDepartamento() {
+        return 50;
     }
 
     // Más metodos
