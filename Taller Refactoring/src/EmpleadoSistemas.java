@@ -1,6 +1,6 @@
-class EmpleadoSistemas extends EmpleadoBase {
-    public EmpleadoSistemas(double salarioBase, int horasTrabajadas) {
-        super(salarioBase, horasTrabajadas);
+class EmpleadoSistemas extends Empleado {
+    public EmpleadoSistemas(String nombre, double salarioBase, int horasTrabajadas, double tarifaHora, String departamento) {
+        super(nombre, salarioBase, horasTrabajadas, tarifaHora, departamento);
     }
 
     @Override
