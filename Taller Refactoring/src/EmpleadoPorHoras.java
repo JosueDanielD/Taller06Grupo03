@@ -15,26 +15,27 @@ public class EmpleadoPorHoras extends Empleado {
         imprimirHorasTrabajadas();
         imprimirDepartamento();
     }
-
+    
     private void imprimirNombre() {
         System.out.println("Nombre: " + super.getNombre());
     }
-
+    
     private void imprimirGenero() {
         System.out.println("Genero: " + this.genero);
     }
-
+    
     private void imprimirSalario() {
         System.out.println("Salario: " + super.getSalarioBase());
     }
-
+    
     private void imprimirHorasTrabajadas() {
         System.out.println("Horas trabajadas: " + super.getHorasTrabajadas());
     }
-
+    
     private void imprimirDepartamento() {
         System.out.println("Departamento: " + super.getDepartamento());
     }
+    
 
     //inline temp
     @Override
