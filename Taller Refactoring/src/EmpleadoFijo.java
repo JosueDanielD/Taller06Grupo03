@@ -4,6 +4,7 @@ public class EmpleadoFijo extends Empleado {
 
     // Constructor: Eliminamos horasTrabajadas, ya que no tiene sentido para un empleado fijo
     public EmpleadoFijo(String nombre, double salarioBase, String departamento, double bonoAnual, String genero) {
+
         super(nombre, salarioBase, 0, 0, departamento); // Aquí, 0 es utilizado para horasTrabajadas, que ya no tiene sentido
         this.bonoAnual = bonoAnual;
         this.genero = genero;
@@ -16,13 +17,16 @@ public class EmpleadoFijo extends Empleado {
         imprimirSalarioBase();  // Imprime el salario base
         imprimirDepartamento(); // Imprime el departamento
         imprimirBonoAnual();    // Imprime el bono anual
+        imprimirHorasTrabajadas();
     }
 
     // Método para imprimir el nombre del empleado
     private void imprimirNombre() {
         System.out.println("Nombre: " + super.getNombre());
     }
-
+    public void imprimirHorasTrabajadas(){
+        System.out.println("horas trabajadas: " + super.getHorasTrabajadas());
+    }
     // Método para imprimir el género del empleado
     private void imprimirGenero() {
         System.out.println("Genero: " + genero);

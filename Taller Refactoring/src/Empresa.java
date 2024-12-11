@@ -16,14 +16,16 @@ public class Empresa {
         empleados.remove(empleado);
     }
 
+    //método a refactorizar: Usando el extract method y Stream API
     public List<Empleado> obtenerEmpleadosPorHorasTrabajadasaPartirDe(int horas) {
-        List<Empleado> empleadosPorTipo = new ArrayList<>();
-        for (Empleado empleado : empleados) {
-            if (empleado.getHorasTrabajadas()>horas) {
-                empleadosPorTipo.add(empleado);
-            }
-        }
-        return empleadosPorTipo;
+        return filtrarEmpleadosPorHoras(horas);
+    }
+
+    private List<Empleado> filtrarEmpleadosPorHoras(int horas){
+        return empleados.stream()
+                .filter(empleado -> empleado.getHorasTrabajadas()>horas)
+                .toList(); //más limpio que crear manualmente la lista.
+
     }
 
     // Más metodos
