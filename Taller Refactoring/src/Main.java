@@ -3,7 +3,7 @@ public class Main {
         Empresa empresa = new Empresa();
 
         EmpleadoPorHoras emp1 = new EmpleadoPorHoras("Dario Laborde", 45, 15, "Sistemas", "Masculino");
-        EmpleadoFijo emp2 = new EmpleadoFijo("Jorge Gaibor",700,45,"Contabilidad",40, "Masculino");
+        EmpleadoFijo emp2 = new EmpleadoFijo("Jorge Gaibor",700,"Contabilidad",40, "Masculino");
         EmpleadoTemporario emp3 = new EmpleadoTemporario("Jordan Salinas",200,20,"Medico",6, "Masculino");
 
         empresa.contratarEmpleado(emp1);
