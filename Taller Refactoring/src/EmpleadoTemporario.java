@@ -16,10 +16,18 @@ public class EmpleadoTemporario extends Empleado {
     }
 
     public void imprimirDetalles() {
+        imprimirInformacionGeneral();
+        imprimirDetalleContrato();
+    }
+
+    private void imprimirInformacionGeneral() {
         System.out.println("Nombre: " + nombre);
-        System.out.println("Genero: " + super.getNombre());
+        System.out.println("Genero: " + genero);  // Se arregló el uso incorrecto de super.getNombre()
         System.out.println("Salario: " + salarioBase);
         System.out.println("Horas trabajadas: " + horasTrabajadas);
+    }
+
+    private void imprimirDetalleContrato() {
         System.out.println("Departamento: " + departamento);
         System.out.println("Meses de contrato: " + mesesContrato);
     }
